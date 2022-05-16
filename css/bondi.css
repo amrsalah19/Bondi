@@ -7,6 +7,7 @@
   --sect-clr: #eff7fa;
   --whi-clr: #fff;
   --main-dur: 0.3s;
+  --alt-dur: 0.5s;
   --cur-po: pointer;
 }
 .to-cent {
@@ -236,11 +237,25 @@ body {
   transform: scale(1.2);
 }
 /* End Techs */
-/* Start project */
+/* Start pProject */
 .project {
   background-color: var(--main-clr);
 }
-/* End project */
+/* End Project */
+/* Start Blog */
+.blog .card {
+  transition: var(--main-dur);
+}
+.blog .card:hover {
+  transform: scale(1.06);
+}
+.blog .card img {
+  transition: var(--main-dur);
+}
+.blog .card:hover img {
+  transform: rotate(-1deg);
+}
+/* End Blog */
 /* Start Subscribe */
 .subscribe {
   background-color: var(--ylw-clr);
@@ -277,15 +292,19 @@ footer :where(.facebook, .twitter, .youtube, .linkedin) {
 }
 footer a:hover .facebook {
   background-color: #1877f2;
+  animation: toRotate var(--alt-dur) linear var(--main-dur);
 }
 footer a:hover .twitter {
   background-color: #1da1f2;
+  animation: toRotate var(--alt-dur) linear var(--main-dur);
 }
 footer a:hover .linkedin {
   background-color: #0077b5;
+  animation: toRotate var(--alt-dur) linear var(--main-dur);
 }
 footer a:hover .youtube {
   background-color: #ff0000;
+  animation: toRotate var(--alt-dur) linear var(--main-dur);
 }
 /* End Footer */
 /* Start Animation */
